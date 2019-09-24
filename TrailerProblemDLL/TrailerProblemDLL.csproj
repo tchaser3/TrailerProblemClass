@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2724E0E0-CC2C-4660-9707-B970AAADC0E6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TrailerProblemDLL</RootNamespace>
+    <AssemblyName>TrailerProblemDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FindOpenTrailerProblemsByTrailerIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOpenTrailerProblemsByTrailerIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindOpenTrailerProblemsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindOpenTrailerProblemsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindTrailerProblemByDateMatchDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindTrailerProblemByDateMatchDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindTrailerProblemsByDateRangeDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindTrailerProblemsByDateRangeDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="FindTrailerProblemsByTrailerIDDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindTrailerProblemsByTrailerIDDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertTrailerProblemEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertTrailerProblemEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="TrailerProblemClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TrailerProblemDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrailerProblemDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTrailerProblemCostEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateTrailerProblemCostEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTrailerProblemSolvedEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateTrailerProblemSolvedEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateTrailerProblemVendorEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdateTrailerProblemVendorEntry.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="FindOpenTrailerProblemsByTrailerIDDataSet.xsc">
+      <DependentUpon>FindOpenTrailerProblemsByTrailerIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenTrailerProblemsByTrailerIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOpenTrailerProblemsByTrailerIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOpenTrailerProblemsByTrailerIDDataSet.xss">
+      <DependentUpon>FindOpenTrailerProblemsByTrailerIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenTrailerProblemsDataSet.xsc">
+      <DependentUpon>FindOpenTrailerProblemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindOpenTrailerProblemsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindOpenTrailerProblemsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindOpenTrailerProblemsDataSet.xss">
+      <DependentUpon>FindOpenTrailerProblemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindTrailerProblemByDateMatchDataSet.xsc">
+      <DependentUpon>FindTrailerProblemByDateMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindTrailerProblemByDateMatchDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindTrailerProblemByDateMatchDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindTrailerProblemByDateMatchDataSet.xss">
+      <DependentUpon>FindTrailerProblemByDateMatchDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindTrailerProblemsByDateRangeDataSet.xsc">
+      <DependentUpon>FindTrailerProblemsByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindTrailerProblemsByDateRangeDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindTrailerProblemsByDateRangeDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindTrailerProblemsByDateRangeDataSet.xss">
+      <DependentUpon>FindTrailerProblemsByDateRangeDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindTrailerProblemsByTrailerIDDataSet.xsc">
+      <DependentUpon>FindTrailerProblemsByTrailerIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindTrailerProblemsByTrailerIDDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindTrailerProblemsByTrailerIDDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindTrailerProblemsByTrailerIDDataSet.xss">
+      <DependentUpon>FindTrailerProblemsByTrailerIDDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertTrailerProblemEntry.xsc">
+      <DependentUpon>InsertTrailerProblemEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertTrailerProblemEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertTrailerProblemEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertTrailerProblemEntry.xss">
+      <DependentUpon>InsertTrailerProblemEntry.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="TrailerProblemDataSet.xsc">
+      <DependentUpon>TrailerProblemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="TrailerProblemDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>TrailerProblemDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="TrailerProblemDataSet.xss">
+      <DependentUpon>TrailerProblemDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateTrailerProblemCostEntry.xsc">
+      <DependentUpon>UpdateTrailerProblemCostEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateTrailerProblemCostEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateTrailerProblemCostEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateTrailerProblemCostEntry.xss">
+      <DependentUpon>UpdateTrailerProblemCostEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateTrailerProblemSolvedEntry.xsc">
+      <DependentUpon>UpdateTrailerProblemSolvedEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateTrailerProblemSolvedEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateTrailerProblemSolvedEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateTrailerProblemSolvedEntry.xss">
+      <DependentUpon>UpdateTrailerProblemSolvedEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateTrailerProblemVendorEntry.xsc">
+      <DependentUpon>UpdateTrailerProblemVendorEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdateTrailerProblemVendorEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdateTrailerProblemVendorEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdateTrailerProblemVendorEntry.xss">
+      <DependentUpon>UpdateTrailerProblemVendorEntry.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
